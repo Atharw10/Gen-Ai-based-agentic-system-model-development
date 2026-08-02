@@ -1,0 +1,1 @@
+The **HistGradientBoosting** model (trial 16) was selected as the best performing model based on Out-of-Time (OOT) PR_AUC across 18 trials. OOT performance metrics include: precision=0.0000, recall=0.0000, f1=0.0000, roc_auc=0.7210, pr_auc=0.1203, ks=0.3157, and gini=0.4419. The F1-optimal threshold identified is 0.105.

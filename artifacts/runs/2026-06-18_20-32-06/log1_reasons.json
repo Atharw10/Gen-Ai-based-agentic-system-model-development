@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "research/models",
+    "decision": "Recommended models: ['LightGBM', 'XGBoost', 'LogisticRegression']",
+    "why": "LightGBM and XGBoost are chosen for their efficiency and performance on tabular data, especially with imbalanced datasets. Logistic Regression is included as a baseline and for its interpretability, which is crucial in banking. (Cited: https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data, https://www.oajaiml.com/uploads/archivepdf/237151184.pdf)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "research/windows",
+    "decision": "observation=3m, OOT=1 snapshot(s)",
+    "why": "A 3-month observation window is chosen to capture recent customer behavior, while a 1-month out-of-time (OOT) window is used for robust model evaluation and to simulate real-world deployment. This balances capturing sufficient historical data with reflecting current trends. (Cited: https://www.altexsoft.com/blog/propensity-model)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "research/hpo",
+    "decision": "HPO ranges proposed for: ['LightGBM', 'XGBoost']",
+    "why": "Hyperparameter optimization is critical for maximizing model performance. The spaces for LightGBM and XGBoost are defined to explore key parameters that influence model complexity and learning speed. Feature engineering should precede HPO for better results. (Cited: https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "feature_engineering/families",
+    "decision": "Suggested families: ['Demographics', 'Transaction_History', 'Existing_Products', 'Credit_Behavior', 'Digital_Engagement']",
+    "why": "A comprehensive set of feature families is crucial for building an accurate propensity model. These families cover various aspects of customer behavior and profile, providing a rich dataset for model training. (Cited: https://www.altexsoft.com/blog/propensity-model, https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data, https://www.oajaiml.com/uploads/archivepdf/237151184.pdf)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "model_design/algorithms",
+    "decision": "Shortlist applied: ['LightGBM', 'XGBoost', 'LogisticRegression']",
+    "why": "LightGBM and XGBoost are chosen for their efficiency and performance on tabular data, especially with imbalanced datasets. Logistic Regression is included as a baseline and for its interpretability, which is crucial in banking. (Cited: https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data, https://www.oajaiml.com/uploads/archivepdf/237151184.pdf)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "model_design/windows",
+    "decision": "train=['2025-01', '2025-02', '2025-03', '2025-04', '2025-05'], OOT=['2025-06']",
+    "why": "A 3-month observation window is chosen to capture recent customer behavior, while a 1-month out-of-time (OOT) window is used for robust model evaluation and to simulate real-world deployment. This balances capturing sufficient historical data with reflecting current trends. (Cited: https://www.altexsoft.com/blog/propensity-model)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  },
+  {
+    "stage": "model_design/metric",
+    "decision": "Primary metric: PR_AUC",
+    "why": "deterministic metric policy for objective + tier 'moderate'",
+    "source": "deterministic policy"
+  },
+  {
+    "stage": "model_design/hpo",
+    "decision": "Using research HPO ranges for ['LightGBM', 'XGBoost']",
+    "why": "Hyperparameter optimization is critical for maximizing model performance. The spaces for LightGBM and XGBoost are defined to explore key parameters that influence model complexity and learning speed. Feature engineering should precede HPO for better results. (Cited: https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c)",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://thedocs.worldbank.org/en/doc/935891585869698451-0130022020/original/CREDITSCORINGAPPROACHESGUIDELINESFINALWEB.pdf', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c']"
+  }
+]

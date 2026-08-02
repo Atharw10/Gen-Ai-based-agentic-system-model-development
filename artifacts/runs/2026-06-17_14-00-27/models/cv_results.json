@@ -1,0 +1,25 @@
+{
+  "cv_results": [
+    {
+      "model": "LightGBM",
+      "cv_PR_AUC_mean": 0.11635471642702984,
+      "cv_PR_AUC_std": 0.0019113990612194113,
+      "scoring": "average_precision"
+    },
+    {
+      "model": "XGBoost",
+      "cv_PR_AUC_mean": 0.11573340653325422,
+      "cv_PR_AUC_std": 0.0019438925227345531,
+      "scoring": "average_precision"
+    }
+  ],
+  "imbalance_info": {
+    "is_binary": true,
+    "n_classes": 2,
+    "pos": 20120,
+    "neg": 379880,
+    "pos_ratio": 0.0503,
+    "tier": "moderate",
+    "scale_pos_weight": 18.880715705765407
+  }
+}

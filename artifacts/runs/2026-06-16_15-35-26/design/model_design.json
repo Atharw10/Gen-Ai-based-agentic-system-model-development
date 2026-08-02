@@ -1,0 +1,40 @@
+{
+  "problem_framing": "Develop a model to predict the propensity of existing customers to convert to a new credit card product within the next month, given their transaction history and product holdings.",
+  "windows": {
+    "observation_window_months": 3,
+    "performance_window_months": 1,
+    "snapshots_for_training": [
+      "2025-01",
+      "2025-02",
+      "2025-03"
+    ],
+    "oot_snapshots": [
+      "2025-05",
+      "2025-06"
+    ],
+    "oot_rationale": "The latest two months (2025-05 and 2025-06) are selected as out-of-time (OOT) snapshots to evaluate the model's performance on unseen, future data, ensuring robustness and generalizability."
+  },
+  "data_strategy": {
+    "split_method": "temporal_OOT_by_snapshot",
+    "imputation_numeric": "median",
+    "imputation_categorical": "mode",
+    "outlier_strategy": "winsorize_99",
+    "scaling_required": true,
+    "woe_transformation": false,
+    "correlation_threshold": 0.9,
+    "psi_threshold": 0.25,
+    "imbalance_tier": "severe"
+  },
+  "algorithm_shortlist": [
+    "LightGBM",
+    "XGBoost"
+  ],
+  "rationale": "Given the severe class imbalance (5.03% positive rate) and the dataset size, Gradient Boosting Machines (LightGBM and XGBoost) are chosen for their ability to handle complex interactions and their robustness. These algorithms will be configured with `scale_pos_weight` to address the imbalance, and feature scaling will be applied to optimize their performance.",
+  "expected_metric_targets": {
+    "primary_metric": "PR_AUC",
+    "target_value": 0.2
+  },
+  "research_sources": [
+    "Gemini Flash Lite - data-aware recommendation"
+  ]
+}

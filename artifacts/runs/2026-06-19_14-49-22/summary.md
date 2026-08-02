@@ -1,0 +1,1 @@
+The LightGBM model, identified as the best performer in trial 1, was selected based on Out-of-Time (OOT) PR_AUC across 20 trials. Its OOT performance metrics include roc_auc=0.7230, pr_auc=0.1208, ks=0.3217, gini=0.4461, precision=0.1503, recall=0.3693, and f1=0.2137. The F1-optimal threshold for this model is 0.653.

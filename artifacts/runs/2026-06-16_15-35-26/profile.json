@@ -1,0 +1,195 @@
+{
+  "business_objective": "Build cc upselling propensity model",
+  "shape": {
+    "n_rows": 600000,
+    "n_cols": 34
+  },
+  "memory_mb": 195.93,
+  "target": {
+    "name": "cc_conversion_next_1m",
+    "dtype": "int64",
+    "n_unique": 2,
+    "distribution": {
+      "0": 569816,
+      "1": 30184
+    },
+    "null_pct": 0.0,
+    "pos_ratio": 0.0503,
+    "is_binary": true
+  },
+  "temporal": {
+    "date_col": "snapshot_month",
+    "min_date": "2025-01-01 00:00:00",
+    "max_date": "2025-06-01 00:00:00",
+    "n_snapshots": 6,
+    "snapshots": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "rows_per_snapshot": {
+      "2025-01": 100000,
+      "2025-02": 100000,
+      "2025-03": 100000,
+      "2025-04": 100000,
+      "2025-05": 100000,
+      "2025-06": 100000
+    },
+    "null_pct": 0.0
+  },
+  "columns": {
+    "n_features": 32,
+    "numeric": [
+      "customer_id",
+      "txn_count_1m",
+      "active_days_1m",
+      "avg_txn_per_day_1m",
+      "max_txn_single_day_1m",
+      "total_credit_amt_1m",
+      "upi_credit_amt_1m",
+      "neft_rtgs_credit_amt_1m",
+      "other_credit_amt_1m",
+      "total_debit_amt_1m",
+      "upi_debit_amt_1m",
+      "atm_debit_amt_1m",
+      "pos_debit_amt_1m",
+      "emi_debit_amt_1m",
+      "mandate_count_1m",
+      "mandate_amt_1m",
+      "adhoc_debit_count_1m",
+      "mandate_to_total_debit_ratio",
+      "bounce_flag_3m",
+      "mcc_retail_amt_1m",
+      "mcc_food_dining_amt_1m",
+      "mcc_travel_amt_1m",
+      "mcc_utilities_amt_1m",
+      "mcc_fuel_amt_1m",
+      "mcc_healthcare_amt_1m",
+      "mcc_entertainment_amt_1m",
+      "mcc_ecommerce_amt_1m",
+      "cc_bill_payment_amt_1m",
+      "digital_txn_ratio_1m",
+      "existing_product_count",
+      "existing_cc_flag"
+    ],
+    "categorical": [
+      "segment"
+    ],
+    "high_cardinality": [],
+    "constant": []
+  },
+  "missingness": {
+    "overall_pct": 0.0,
+    "top10_columns": {
+      "customer_id": 0.0,
+      "segment": 0.0,
+      "existing_product_count": 0.0,
+      "digital_txn_ratio_1m": 0.0,
+      "cc_bill_payment_amt_1m": 0.0,
+      "mcc_ecommerce_amt_1m": 0.0,
+      "mcc_entertainment_amt_1m": 0.0,
+      "mcc_healthcare_amt_1m": 0.0,
+      "mcc_fuel_amt_1m": 0.0,
+      "mcc_utilities_amt_1m": 0.0
+    },
+    "n_cols_over_50pct": 0
+  },
+  "numeric_summary_sample": {
+    "customer_id": {
+      "mean": 50000.5,
+      "std": 28850.43,
+      "min": 1000.99,
+      "max": 99000.01
+    },
+    "txn_count_1m": {
+      "mean": 144.5,
+      "std": 31.69,
+      "min": 67.0,
+      "max": 201.0
+    },
+    "active_days_1m": {
+      "mean": 23.21,
+      "std": 5.5,
+      "min": 9.0,
+      "max": 30.0
+    },
+    "avg_txn_per_day_1m": {
+      "mean": 6.41,
+      "std": 1.46,
+      "min": 3.64,
+      "max": 11.31
+    },
+    "max_txn_single_day_1m": {
+      "mean": 9.54,
+      "std": 3.55,
+      "min": 2.0,
+      "max": 19.0
+    },
+    "total_credit_amt_1m": {
+      "mean": 91785.06,
+      "std": 65174.04,
+      "min": 8552.09,
+      "max": 287305.41
+    },
+    "upi_credit_amt_1m": {
+      "mean": 13979.67,
+      "std": 8831.66,
+      "min": 677.86,
+      "max": 41128.56
+    },
+    "neft_rtgs_credit_amt_1m": {
+      "mean": 21017.72,
+      "std": 19761.14,
+      "min": 0.0,
+      "max": 84074.28
+    },
+    "other_credit_amt_1m": {
+      "mean": 2647.25,
+      "std": 1680.27,
+      "min": 0.0,
+      "max": 8101.51
+    },
+    "total_debit_amt_1m": {
+      "mean": 66698.28,
+      "std": 32428.1,
+      "min": 19413.48,
+      "max": 158859.94
+    },
+    "upi_debit_amt_1m": {
+      "mean": 17474.19,
+      "std": 10306.61,
+      "min": 822.91,
+      "max": 48829.59
+    },
+    "atm_debit_amt_1m": {
+      "mean": 7835.48,
+      "std": 4065.11,
+      "min": 562.8,
+      "max": 20164.95
+    },
+    "pos_debit_amt_1m": {
+      "mean": 12301.81,
+      "std": 8315.87,
+      "min": 92.6,
+      "max": 40579.64
+    },
+    "emi_debit_amt_1m": {
+      "mean": 11774.13,
+      "std": 6815.03,
+      "min": 670.24,
+      "max": 32558.39
+    },
+    "mandate_count_1m": {
+      "mean": 4.63,
+      "std": 2.66,
+      "min": 0.0,
+      "max": 13.0
+    }
+  },
+  "categorical_cardinality_sample": {
+    "segment": 5
+  }
+}

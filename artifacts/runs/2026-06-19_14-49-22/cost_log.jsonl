@@ -1,0 +1,2 @@
+{"label": "research", "model": "gemini-2.5-flash-lite", "input_tokens": 350, "cached_tokens": 0, "output_tokens": 920, "thinking_tokens": 0, "total_tokens": 1270, "cached": false, "tokens_estimated": false, "est_cost_usd": 0.000403}
+{"label": "narrative", "model": "gemini-2.5-flash-lite", "input_tokens": 144, "cached_tokens": 0, "output_tokens": 130, "thinking_tokens": 0, "total_tokens": 274, "cached": false, "tokens_estimated": false, "est_cost_usd": 6.6e-05}

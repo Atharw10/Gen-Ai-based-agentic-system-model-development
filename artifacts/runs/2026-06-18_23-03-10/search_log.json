@@ -1,0 +1,16 @@
+[
+  {
+    "round": 1,
+    "best_oot": 0.12065,
+    "improvement": null,
+    "continue": true,
+    "note": "llm: continue \u2014 The performance differences between the top algorithms are very small (within 0.0003). While the improvement in the first round might have been significant, the"
+  },
+  {
+    "round": 2,
+    "best_oot": 0.12065,
+    "improvement": 0.0,
+    "continue": false,
+    "note": "stop: hard cap reached (2/2 rounds)"
+  }
+]

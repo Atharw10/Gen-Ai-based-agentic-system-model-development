@@ -1,0 +1,536 @@
+{
+  "n_in": 52,
+  "n_selected": 40,
+  "selected": [
+    {
+      "alias": "col_0002",
+      "real_name": "segment"
+    },
+    {
+      "alias": "col_0003",
+      "real_name": "txn_count_1m"
+    },
+    {
+      "alias": "col_0004",
+      "real_name": "txn_count_3m"
+    },
+    {
+      "alias": "col_0006",
+      "real_name": "active_days_1m"
+    },
+    {
+      "alias": "col_0007",
+      "real_name": "avg_txn_per_day_1m"
+    },
+    {
+      "alias": "col_0008",
+      "real_name": "max_txn_single_day_1m"
+    },
+    {
+      "alias": "col_0009",
+      "real_name": "total_credit_amt_1m"
+    },
+    {
+      "alias": "col_0010",
+      "real_name": "total_credit_amt_3m"
+    },
+    {
+      "alias": "col_0013",
+      "real_name": "salary_credit_months_3m"
+    },
+    {
+      "alias": "col_0014",
+      "real_name": "upi_credit_amt_1m"
+    },
+    {
+      "alias": "col_0015",
+      "real_name": "neft_rtgs_credit_amt_1m"
+    },
+    {
+      "alias": "col_0016",
+      "real_name": "other_credit_amt_1m"
+    },
+    {
+      "alias": "col_0017",
+      "real_name": "total_debit_amt_1m"
+    },
+    {
+      "alias": "col_0018",
+      "real_name": "total_debit_amt_3m"
+    },
+    {
+      "alias": "col_0020",
+      "real_name": "upi_debit_amt_1m"
+    },
+    {
+      "alias": "col_0021",
+      "real_name": "neft_rtgs_debit_amt_1m"
+    },
+    {
+      "alias": "col_0022",
+      "real_name": "atm_debit_amt_1m"
+    },
+    {
+      "alias": "col_0023",
+      "real_name": "pos_debit_amt_1m"
+    },
+    {
+      "alias": "col_0024",
+      "real_name": "emi_debit_amt_1m"
+    },
+    {
+      "alias": "col_0025",
+      "real_name": "mandate_count_1m"
+    },
+    {
+      "alias": "col_0026",
+      "real_name": "mandate_amt_1m"
+    },
+    {
+      "alias": "col_0027",
+      "real_name": "adhoc_debit_count_1m"
+    },
+    {
+      "alias": "col_0028",
+      "real_name": "adhoc_debit_amt_1m"
+    },
+    {
+      "alias": "col_0029",
+      "real_name": "mandate_to_total_debit_ratio"
+    },
+    {
+      "alias": "col_0030",
+      "real_name": "bounce_count_1m"
+    },
+    {
+      "alias": "col_0031",
+      "real_name": "bounce_count_3m"
+    },
+    {
+      "alias": "col_0032",
+      "real_name": "bounce_amt_1m"
+    },
+    {
+      "alias": "col_0034",
+      "real_name": "mcc_retail_amt_1m"
+    },
+    {
+      "alias": "col_0035",
+      "real_name": "mcc_food_dining_amt_1m"
+    },
+    {
+      "alias": "col_0036",
+      "real_name": "mcc_travel_amt_1m"
+    },
+    {
+      "alias": "col_0037",
+      "real_name": "mcc_utilities_amt_1m"
+    },
+    {
+      "alias": "col_0038",
+      "real_name": "mcc_fuel_amt_1m"
+    },
+    {
+      "alias": "col_0039",
+      "real_name": "mcc_healthcare_amt_1m"
+    },
+    {
+      "alias": "col_0040",
+      "real_name": "mcc_entertainment_amt_1m"
+    },
+    {
+      "alias": "col_0041",
+      "real_name": "mcc_ecommerce_amt_1m"
+    },
+    {
+      "alias": "col_0042",
+      "real_name": "net_flow_1m"
+    },
+    {
+      "alias": "col_0043",
+      "real_name": "credit_debit_ratio_1m"
+    },
+    {
+      "alias": "col_0044",
+      "real_name": "avg_txn_size_1m"
+    },
+    {
+      "alias": "col_0045",
+      "real_name": "cc_bill_payment_amt_1m"
+    },
+    {
+      "alias": "col_0046",
+      "real_name": "digital_txn_ratio_1m"
+    }
+  ],
+  "suspicious_high_iv": [],
+  "dropped_redundant": [
+    {
+      "alias": "col_0005",
+      "real_name": "txn_count_6m"
+    },
+    {
+      "alias": "col_0011",
+      "real_name": "total_credit_amt_6m"
+    },
+    {
+      "alias": "col_0012",
+      "real_name": "salary_credit_amt_1m"
+    },
+    {
+      "alias": "col_0019",
+      "real_name": "total_debit_amt_6m"
+    },
+    {
+      "alias": "col_0033",
+      "real_name": "bounce_flag_3m"
+    },
+    {
+      "alias": "credit_debit_ratio_3m",
+      "real_name": "credit_debit_ratio_3m"
+    },
+    {
+      "alias": "bounce_rate_3m",
+      "real_name": "bounce_rate_3m"
+    }
+  ],
+  "dropped_low_iv": [
+    {
+      "alias": "col_0048",
+      "real_name": "existing_cc_flag"
+    },
+    {
+      "alias": "col_0047",
+      "real_name": "existing_product_count"
+    },
+    {
+      "alias": "credit_velocity_3m_6m",
+      "real_name": "credit_velocity_3m_6m"
+    },
+    {
+      "alias": "col_0001",
+      "real_name": "customer_id"
+    },
+    {
+      "alias": "debit_velocity_3m_6m",
+      "real_name": "debit_velocity_3m_6m"
+    }
+  ],
+  "dropped_constant": [],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [],
+  "iv_table": [
+    {
+      "real_name": "segment",
+      "alias": "col_0002",
+      "IV": 0.48906322504878597,
+      "strength": "strong"
+    },
+    {
+      "real_name": "total_credit_amt_1m",
+      "alias": "col_0009",
+      "IV": 0.45859773677194837,
+      "strength": "strong"
+    },
+    {
+      "real_name": "salary_credit_amt_1m",
+      "alias": "col_0012",
+      "IV": 0.45858056807018016,
+      "strength": "strong"
+    },
+    {
+      "real_name": "net_flow_1m",
+      "alias": "col_0042",
+      "IV": 0.37566705166323555,
+      "strength": "strong"
+    },
+    {
+      "real_name": "avg_txn_size_1m",
+      "alias": "col_0044",
+      "IV": 0.3500598085248761,
+      "strength": "strong"
+    },
+    {
+      "real_name": "mcc_travel_amt_1m",
+      "alias": "col_0036",
+      "IV": 0.3459752353089057,
+      "strength": "strong"
+    },
+    {
+      "real_name": "total_credit_amt_3m",
+      "alias": "col_0010",
+      "IV": 0.34116715078189735,
+      "strength": "strong"
+    },
+    {
+      "real_name": "txn_count_1m",
+      "alias": "col_0003",
+      "IV": 0.31434013954849793,
+      "strength": "strong"
+    },
+    {
+      "real_name": "total_debit_amt_1m",
+      "alias": "col_0017",
+      "IV": 0.3051458797265648,
+      "strength": "strong"
+    },
+    {
+      "real_name": "bounce_count_1m",
+      "alias": "col_0030",
+      "IV": 0.29161897580697743,
+      "strength": "medium"
+    },
+    {
+      "real_name": "total_credit_amt_6m",
+      "alias": "col_0011",
+      "IV": 0.2910227345294049,
+      "strength": "medium"
+    },
+    {
+      "real_name": "bounce_flag_3m",
+      "alias": "col_0033",
+      "IV": 0.2900652321672168,
+      "strength": "medium"
+    },
+    {
+      "real_name": "bounce_amt_1m",
+      "alias": "col_0032",
+      "IV": 0.27687523519477353,
+      "strength": "medium"
+    },
+    {
+      "real_name": "bounce_count_3m",
+      "alias": "col_0031",
+      "IV": 0.2621967281876902,
+      "strength": "medium"
+    },
+    {
+      "real_name": "digital_txn_ratio_1m",
+      "alias": "col_0046",
+      "IV": 0.2546624679836311,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_entertainment_amt_1m",
+      "alias": "col_0040",
+      "IV": 0.25196964027183777,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mandate_amt_1m",
+      "alias": "col_0026",
+      "IV": 0.25021078212370024,
+      "strength": "medium"
+    },
+    {
+      "real_name": "pos_debit_amt_1m",
+      "alias": "col_0023",
+      "IV": 0.24494249372011806,
+      "strength": "medium"
+    },
+    {
+      "real_name": "neft_rtgs_credit_amt_1m",
+      "alias": "col_0015",
+      "IV": 0.23691623610782,
+      "strength": "medium"
+    },
+    {
+      "real_name": "adhoc_debit_count_1m",
+      "alias": "col_0027",
+      "IV": 0.23212968553462066,
+      "strength": "medium"
+    },
+    {
+      "real_name": "neft_rtgs_debit_amt_1m",
+      "alias": "col_0021",
+      "IV": 0.22445660455688665,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_ecommerce_amt_1m",
+      "alias": "col_0041",
+      "IV": 0.2075994854419354,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_retail_amt_1m",
+      "alias": "col_0034",
+      "IV": 0.20445323344757932,
+      "strength": "medium"
+    },
+    {
+      "real_name": "bounce_rate_3m",
+      "alias": "bounce_rate_3m",
+      "IV": 0.20190205730528094,
+      "strength": "medium"
+    },
+    {
+      "real_name": "credit_debit_ratio_1m",
+      "alias": "col_0043",
+      "IV": 0.20116406224612793,
+      "strength": "medium"
+    },
+    {
+      "real_name": "other_credit_amt_1m",
+      "alias": "col_0016",
+      "IV": 0.19987862924601596,
+      "strength": "medium"
+    },
+    {
+      "real_name": "credit_debit_ratio_3m",
+      "alias": "credit_debit_ratio_3m",
+      "IV": 0.1970156287237947,
+      "strength": "medium"
+    },
+    {
+      "real_name": "upi_debit_amt_1m",
+      "alias": "col_0020",
+      "IV": 0.18516557904301417,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_food_dining_amt_1m",
+      "alias": "col_0035",
+      "IV": 0.17689540920484736,
+      "strength": "medium"
+    },
+    {
+      "real_name": "total_debit_amt_3m",
+      "alias": "col_0018",
+      "IV": 0.17267088718776807,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mandate_count_1m",
+      "alias": "col_0025",
+      "IV": 0.1670525819837672,
+      "strength": "medium"
+    },
+    {
+      "real_name": "emi_debit_amt_1m",
+      "alias": "col_0024",
+      "IV": 0.15500731235296122,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_utilities_amt_1m",
+      "alias": "col_0037",
+      "IV": 0.14604035663582335,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_fuel_amt_1m",
+      "alias": "col_0038",
+      "IV": 0.14463720012966413,
+      "strength": "medium"
+    },
+    {
+      "real_name": "mcc_healthcare_amt_1m",
+      "alias": "col_0039",
+      "IV": 0.13919295726644632,
+      "strength": "medium"
+    },
+    {
+      "real_name": "txn_count_3m",
+      "alias": "col_0004",
+      "IV": 0.12754206587863226,
+      "strength": "medium"
+    },
+    {
+      "real_name": "total_debit_amt_6m",
+      "alias": "col_0019",
+      "IV": 0.12555302454713896,
+      "strength": "medium"
+    },
+    {
+      "real_name": "adhoc_debit_amt_1m",
+      "alias": "col_0028",
+      "IV": 0.12330118057777192,
+      "strength": "medium"
+    },
+    {
+      "real_name": "active_days_1m",
+      "alias": "col_0006",
+      "IV": 0.11422659375077147,
+      "strength": "medium"
+    },
+    {
+      "real_name": "upi_credit_amt_1m",
+      "alias": "col_0014",
+      "IV": 0.1108059270355389,
+      "strength": "medium"
+    },
+    {
+      "real_name": "atm_debit_amt_1m",
+      "alias": "col_0022",
+      "IV": 0.10177207539132144,
+      "strength": "medium"
+    },
+    {
+      "real_name": "max_txn_single_day_1m",
+      "alias": "col_0008",
+      "IV": 0.07434281666984284,
+      "strength": "weak"
+    },
+    {
+      "real_name": "mandate_to_total_debit_ratio",
+      "alias": "col_0029",
+      "IV": 0.06673161449473983,
+      "strength": "weak"
+    },
+    {
+      "real_name": "salary_credit_months_3m",
+      "alias": "col_0013",
+      "IV": 0.061095833007815736,
+      "strength": "weak"
+    },
+    {
+      "real_name": "txn_count_6m",
+      "alias": "col_0005",
+      "IV": 0.059896292629665226,
+      "strength": "weak"
+    },
+    {
+      "real_name": "avg_txn_per_day_1m",
+      "alias": "col_0007",
+      "IV": 0.05728499725872724,
+      "strength": "weak"
+    },
+    {
+      "real_name": "cc_bill_payment_amt_1m",
+      "alias": "col_0045",
+      "IV": 0.05315178682454007,
+      "strength": "weak"
+    },
+    {
+      "real_name": "existing_cc_flag",
+      "alias": "col_0048",
+      "IV": 0.010887600492396454,
+      "strength": "useless"
+    },
+    {
+      "real_name": "existing_product_count",
+      "alias": "col_0047",
+      "IV": 0.005766817638891911,
+      "strength": "useless"
+    },
+    {
+      "real_name": "credit_velocity_3m_6m",
+      "alias": "credit_velocity_3m_6m",
+      "IV": 0.0005269827567027024,
+      "strength": "useless"
+    },
+    {
+      "real_name": "customer_id",
+      "alias": "col_0001",
+      "IV": 0.00021385783556110964,
+      "strength": "useless"
+    },
+    {
+      "real_name": "debit_velocity_3m_6m",
+      "alias": "debit_velocity_3m_6m",
+      "IV": 0.00018019328953978374,
+      "strength": "useless"
+    }
+  ]
+}

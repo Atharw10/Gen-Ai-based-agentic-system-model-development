@@ -1,0 +1,14 @@
+{
+  "stage": "feature_selection",
+  "summary": "Features selected.",
+  "decisions": {
+    "n_in": 41,
+    "n_selected": 24,
+    "suspicious_high_iv": [
+      "leak_target_peek",
+      "feat_inf_1",
+      "feat_inf_3",
+      "feat_inf_0"
+    ]
+  }
+}

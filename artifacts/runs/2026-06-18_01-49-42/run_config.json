@@ -1,0 +1,51 @@
+{
+  "schema_version": "2.0",
+  "business_objective": "Build CC propensity model",
+  "target_col": "target",
+  "date_col": "snapshot_date",
+  "primary_metric": "PR_AUC",
+  "windows": {
+    "observation_window_months": 3,
+    "performance_window_months": 1,
+    "snapshots_for_training": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04"
+    ],
+    "oot_snapshots": [
+      "2025-05",
+      "2025-06"
+    ]
+  },
+  "data_strategy": {
+    "group_col": "customer_id",
+    "imputation_numeric": "median",
+    "imputation_categorical": "mode",
+    "outlier_strategy": "winsorize_99",
+    "scaling_required": false,
+    "woe_transformation": false,
+    "correlation_threshold": 0.85,
+    "psi_threshold": 0.25,
+    "imbalance_tier": "moderate"
+  },
+  "feature_selection": {
+    "max_missing_pct": 0.7,
+    "min_iv": 0.02,
+    "corr_threshold": 0.9,
+    "top_k_by_importance": 200,
+    "importance_method": "null_importance",
+    "sample_rows_for_selection": 50000
+  },
+  "search": {
+    "algorithms": [
+      "LightGBM",
+      "XGBoost"
+    ],
+    "n_trials": 20,
+    "tuner": "optuna",
+    "early_stop_no_improve": 8
+  },
+  "random_seed": 42,
+  "rationale": "Deterministic design for tier 'moderate'."
+}

@@ -1,0 +1,15 @@
+{
+  "credit_3m": "total_credit_amt_3m",
+  "credit_6m": "total_credit_amt_6m",
+  "debit_3m": "total_debit_amt_3m",
+  "debit_6m": "total_debit_amt_6m",
+  "txn_count_3m": "txn_count_3m",
+  "txn_count_6m": "txn_count_6m",
+  "total_amount_3m": null,
+  "bounce_count_3m": "bounce_count_3m",
+  "mandate_pay_amount_3m": "mandate_amt_1m",
+  "mcc_dining_3m": "mcc_food_dining_amt_1m",
+  "mcc_entertainment_3m": "mcc_entertainment_amt_1m",
+  "mcc_travel_3m": "mcc_travel_amt_1m",
+  "mcc_ecommerce_3m": "mcc_ecommerce_amt_1m"
+}

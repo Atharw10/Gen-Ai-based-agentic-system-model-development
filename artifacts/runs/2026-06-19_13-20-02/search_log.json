@@ -1,0 +1,16 @@
+[
+  {
+    "round": 1,
+    "best_oot": 0.1203,
+    "improvement": null,
+    "continue": true,
+    "note": "llm: continue \u2014 The improvements between algorithms are very small (0.0001), suggesting that the models are nearing convergence. However, since only one round of optimization h"
+  },
+  {
+    "round": 2,
+    "best_oot": 0.1203,
+    "improvement": 0.0,
+    "continue": false,
+    "note": "stop: hard cap reached (2/2 rounds)"
+  }
+]

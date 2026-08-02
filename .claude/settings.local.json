@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 *)",
+      "Bash(.venv/bin/python -m pip install numpy pandas scipy scikit-learn pydantic pytest lightgbm optuna)",
+      "Bash(.venv/bin/python -c \"import numpy,pandas,scipy,sklearn,pydantic,lightgbm,optuna,pytest; print\\('OK pydantic',pydantic.__version__,'sklearn',sklearn.__version__,'lgbm',lightgbm.__version__,'optuna',optuna.__version__\\)\")",
+      "Bash(brew install *)",
+      "Bash(.venv/bin/python *)"
+    ]
+  }
+}

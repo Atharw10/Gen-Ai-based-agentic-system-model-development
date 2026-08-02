@@ -1,0 +1,211 @@
+{
+  "business_objective": "Build CC propensity model",
+  "shape": {
+    "n_rows": 600000,
+    "n_cols": 50
+  },
+  "memory_mb": 272.73,
+  "target": {
+    "name": "cc_conversion_next_1m",
+    "dtype": "int64",
+    "n_unique": 2,
+    "distribution": {
+      "0": 569816,
+      "1": 30184
+    },
+    "null_pct": 0.0,
+    "pos_ratio": 0.0503,
+    "is_binary": true
+  },
+  "temporal": {
+    "date_col": "snapshot_month",
+    "min_date": "2025-01-01 00:00:00",
+    "max_date": "2025-06-01 00:00:00",
+    "n_snapshots": 6,
+    "snapshots": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "rows_per_snapshot": {
+      "2025-01": 100000,
+      "2025-02": 100000,
+      "2025-03": 100000,
+      "2025-04": 100000,
+      "2025-05": 100000,
+      "2025-06": 100000
+    },
+    "null_pct": 0.0
+  },
+  "columns": {
+    "n_features": 48,
+    "numeric": [
+      "customer_id",
+      "txn_count_1m",
+      "txn_count_3m",
+      "txn_count_6m",
+      "active_days_1m",
+      "avg_txn_per_day_1m",
+      "max_txn_single_day_1m",
+      "total_credit_amt_1m",
+      "total_credit_amt_3m",
+      "total_credit_amt_6m",
+      "salary_credit_amt_1m",
+      "salary_credit_months_3m",
+      "upi_credit_amt_1m",
+      "neft_rtgs_credit_amt_1m",
+      "other_credit_amt_1m",
+      "total_debit_amt_1m",
+      "total_debit_amt_3m",
+      "total_debit_amt_6m",
+      "upi_debit_amt_1m",
+      "neft_rtgs_debit_amt_1m",
+      "atm_debit_amt_1m",
+      "pos_debit_amt_1m",
+      "emi_debit_amt_1m",
+      "mandate_count_1m",
+      "mandate_amt_1m",
+      "adhoc_debit_count_1m",
+      "adhoc_debit_amt_1m",
+      "mandate_to_total_debit_ratio",
+      "bounce_count_1m",
+      "bounce_count_3m",
+      "bounce_amt_1m",
+      "bounce_flag_3m",
+      "mcc_retail_amt_1m",
+      "mcc_food_dining_amt_1m",
+      "mcc_travel_amt_1m",
+      "mcc_utilities_amt_1m",
+      "mcc_fuel_amt_1m",
+      "mcc_healthcare_amt_1m",
+      "mcc_entertainment_amt_1m",
+      "mcc_ecommerce_amt_1m",
+      "net_flow_1m",
+      "credit_debit_ratio_1m",
+      "avg_txn_size_1m",
+      "cc_bill_payment_amt_1m",
+      "digital_txn_ratio_1m",
+      "existing_product_count",
+      "existing_cc_flag"
+    ],
+    "categorical": [
+      "segment"
+    ],
+    "high_cardinality": [],
+    "constant": []
+  },
+  "missingness": {
+    "overall_pct": 0.0,
+    "top10_columns": {
+      "customer_id": 0.0,
+      "segment": 0.0,
+      "adhoc_debit_count_1m": 0.0,
+      "adhoc_debit_amt_1m": 0.0,
+      "mandate_to_total_debit_ratio": 0.0,
+      "bounce_count_1m": 0.0,
+      "bounce_count_3m": 0.0,
+      "bounce_amt_1m": 0.0,
+      "bounce_flag_3m": 0.0,
+      "mcc_retail_amt_1m": 0.0
+    },
+    "n_cols_over_50pct": 0
+  },
+  "numeric_summary_sample": {
+    "customer_id": {
+      "mean": 50000.5,
+      "std": 28867.54,
+      "min": 1.0,
+      "max": 100000.0
+    },
+    "txn_count_1m": {
+      "mean": 144.51,
+      "std": 31.9,
+      "min": 44.0,
+      "max": 235.0
+    },
+    "txn_count_3m": {
+      "mean": 360.8,
+      "std": 139.22,
+      "min": 48.0,
+      "max": 752.0
+    },
+    "txn_count_6m": {
+      "mean": 508.58,
+      "std": 275.49,
+      "min": 49.0,
+      "max": 1473.0
+    },
+    "active_days_1m": {
+      "mean": 23.2,
+      "std": 5.53,
+      "min": 2.0,
+      "max": 30.0
+    },
+    "avg_txn_per_day_1m": {
+      "mean": 6.42,
+      "std": 1.54,
+      "min": 1.96,
+      "max": 46.5
+    },
+    "max_txn_single_day_1m": {
+      "mean": 9.55,
+      "std": 3.59,
+      "min": 0.0,
+      "max": 29.0
+    },
+    "total_credit_amt_1m": {
+      "mean": 91969.19,
+      "std": 65847.16,
+      "min": 1005.53,
+      "max": 413374.69
+    },
+    "total_credit_amt_3m": {
+      "mean": 229880.74,
+      "std": 186228.99,
+      "min": 1357.9,
+      "max": 1309108.99
+    },
+    "total_credit_amt_6m": {
+      "mean": 323867.44,
+      "std": 301125.39,
+      "min": 1363.99,
+      "max": 2443336.27
+    },
+    "salary_credit_amt_1m": {
+      "mean": 54185.71,
+      "std": 48653.91,
+      "min": 0.0,
+      "max": 304783.87
+    },
+    "salary_credit_months_3m": {
+      "mean": 1.72,
+      "std": 1.12,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "upi_credit_amt_1m": {
+      "mean": 14019.34,
+      "std": 8998.4,
+      "min": 0.0,
+      "max": 73771.94
+    },
+    "neft_rtgs_credit_amt_1m": {
+      "mean": 21107.47,
+      "std": 20082.46,
+      "min": 0.0,
+      "max": 156475.29
+    },
+    "other_credit_amt_1m": {
+      "mean": 2656.66,
+      "std": 1715.14,
+      "min": 0.0,
+      "max": 14864.46
+    }
+  },
+  "categorical_cardinality_sample": {
+    "segment": 5
+  }
+}

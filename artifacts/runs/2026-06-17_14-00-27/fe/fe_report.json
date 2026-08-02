@@ -1,0 +1,77 @@
+{
+  "created_derived_features": [
+    "credit_velocity_3m_6m",
+    "debit_velocity_3m_6m",
+    "credit_debit_ratio_3m",
+    "mandate_share_3m",
+    "bounce_rate_3m"
+  ],
+  "column_map": {
+    "credit_3m": "total_credit_amt_3m",
+    "credit_6m": "total_credit_amt_6m",
+    "debit_3m": "total_debit_amt_3m",
+    "debit_6m": "total_debit_amt_6m",
+    "txn_count_3m": "txn_count_3m",
+    "txn_count_6m": "txn_count_6m",
+    "total_amount_3m": null,
+    "bounce_count_3m": "bounce_count_3m",
+    "mandate_pay_amount_3m": "mandate_amt_1m",
+    "mcc_dining_3m": "mcc_food_dining_amt_1m",
+    "mcc_entertainment_3m": "mcc_entertainment_amt_1m",
+    "mcc_travel_3m": "mcc_travel_amt_1m",
+    "mcc_ecommerce_3m": "mcc_ecommerce_amt_1m"
+  },
+  "final_n_features": 42,
+  "dropped_high_cardinality": [],
+  "dropped_psi_unstable": [
+    "debit_velocity_3m_6m",
+    "txn_count_3m",
+    "txn_count_6m",
+    "total_debit_amt_6m",
+    "credit_velocity_3m_6m",
+    "salary_credit_months_3m",
+    "total_debit_amt_3m",
+    "total_credit_amt_6m",
+    "bounce_count_3m",
+    "mandate_share_3m",
+    "total_credit_amt_3m"
+  ],
+  "dropped_correlation": [
+    [
+      "total_credit_amt_1m",
+      "salary_credit_amt_1m",
+      0.9354160464645992
+    ],
+    [
+      "bounce_count_1m",
+      "bounce_flag_3m",
+      0.9317039516920045
+    ],
+    [
+      "total_credit_amt_1m",
+      "avg_txn_size_1m",
+      0.9130549751995218
+    ],
+    [
+      "credit_debit_ratio_1m",
+      "credit_debit_ratio_3m",
+      0.9831312452188423
+    ]
+  ],
+  "temporal_split": {
+    "split_type": "temporal_OOT",
+    "date_col": "snapshot_month",
+    "train_range": [
+      "2025-01-01 00:00:00",
+      "2025-04-01 00:00:00"
+    ],
+    "oot_range": [
+      "2025-05-01 00:00:00",
+      "2025-06-01 00:00:00"
+    ],
+    "train_rows": 400000,
+    "oot_rows": 200000
+  },
+  "scaling_applied": true,
+  "woe_applied": false
+}

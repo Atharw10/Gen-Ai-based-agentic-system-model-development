@@ -1,0 +1,28 @@
+# v2 deterministic pipeline (always required)
+numpy
+pandas
+scipy
+scikit-learn
+statsmodels
+pydantic>=2
+optuna
+joblib
+matplotlib
+
+# optional gradient boosters (pipeline falls back to sklearn HistGradientBoosting if absent;
+# lightgbm needs libomp at runtime: `brew install libomp` on macOS)
+lightgbm
+xgboost
+
+# orchestration: LangGraph graph engine (`run_v2.py --engine graph`); works offline too
+langgraph
+
+# LLM advisor plane (only needed for `--llm` / USE_LLM=True)
+langchain-core
+langchain-google-genai
+tavily-python
+
+# tooling
+pytest
+# python<3.10 only: enables `X | None` runtime hints for pydantic
+eval_type_backport; python_version < "3.10"

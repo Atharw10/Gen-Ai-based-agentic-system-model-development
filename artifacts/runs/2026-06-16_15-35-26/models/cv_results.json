@@ -1,0 +1,31 @@
+{
+  "cv_results": [
+    {
+      "model": "XGBoost",
+      "cv_ROC_AUC_mean": 0.7098750428093752,
+      "cv_ROC_AUC_std": 0.0015145007296326286,
+      "scoring": "roc_auc"
+    },
+    {
+      "model": "LightGBM",
+      "cv_ROC_AUC_mean": 0.7136379168916165,
+      "cv_ROC_AUC_std": 0.0013165734172055415,
+      "scoring": "roc_auc"
+    },
+    {
+      "model": "GradientBoosting",
+      "cv_ROC_AUC_mean": 0.7256290073604912,
+      "cv_ROC_AUC_std": 0.0015537705605811313,
+      "scoring": "roc_auc"
+    }
+  ],
+  "imbalance_info": {
+    "is_binary": true,
+    "n_classes": 2,
+    "pos": 20120,
+    "neg": 379880,
+    "pos_ratio": 0.0503,
+    "tier": "moderate",
+    "scale_pos_weight": 18.880715705765407
+  }
+}

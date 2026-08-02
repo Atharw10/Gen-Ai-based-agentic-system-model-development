@@ -1,0 +1,14 @@
+{
+  "tier": "moderate",
+  "primary_metric": "PR_AUC",
+  "secondary_metric": "F1",
+  "rationale": "PR-AUC + lift: marketing/propensity cares about top-decile precision",
+  "sort_key": "PR_AUC",
+  "best_model": "LightGBM",
+  "optimal_threshold": 0.6463853295333266,
+  "business_thresholds": {
+    "f1_optimal": 0.6463853295333266,
+    "precision_50": null,
+    "recall_80": 0.3456536072607988
+  }
+}

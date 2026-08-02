@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "research/models",
+    "decision": "Recommended models: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Gradient boosting models like LightGBM, XGBoost, and HistGradientBoosting are highly effective for tabular data and can handle moderate class imbalance well. They offer good performance and interpretability, crucial for banking applications. Logistic Regression is a good baseline but may struggle with complex interactions. RandomForest is also a strong contender but can be slower than gradient boosting methods for large datasets.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "research/windows",
+    "decision": "observation=5m, OOT=1 snapshot(s)",
+    "why": "Using 5 months for observation and 1 month for out-of-time (OOT) validation provides a sufficient lookback period to capture customer behavior trends while ensuring a recent and relevant OOT set for performance evaluation, aligning with the monthly snapshot data.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "research/hpo",
+    "decision": "HPO ranges proposed for: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter optimization is crucial for maximizing model performance. The provided spaces cover key parameters for LightGBM, XGBoost, and HistGradientBoosting, focusing on learning rate, tree complexity, and regularization. Feature engineering should precede HPO, as stated in https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "feature_engineering/families",
+    "decision": "Suggested families: ['Demographics', 'Transaction History', 'Existing Products & Services', 'Credit Bureau Data', 'Engagement Metrics']",
+    "why": "A comprehensive set of feature families is essential for building a robust propensity model. These families cover demographic, behavioral, financial, and engagement aspects of customers, drawing from established practices in propensity modeling (e.g., https://www.altexsoft.com/blog/propensity-model, https://antonsruberts.github.io/propensity-model, https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data). Feature engineering will be critical to extract meaningful signals from these raw data points, as highlighted in https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "model_design/algorithms",
+    "decision": "Shortlist applied: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Gradient boosting models like LightGBM, XGBoost, and HistGradientBoosting are highly effective for tabular data and can handle moderate class imbalance well. They offer good performance and interpretability, crucial for banking applications. Logistic Regression is a good baseline but may struggle with complex interactions. RandomForest is also a strong contender but can be slower than gradient boosting methods for large datasets.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "model_design/windows",
+    "decision": "train=['2025-01', '2025-02', '2025-03', '2025-04', '2025-05'], OOT=['2025-06']",
+    "why": "Using 5 months for observation and 1 month for out-of-time (OOT) validation provides a sufficient lookback period to capture customer behavior trends while ensuring a recent and relevant OOT set for performance evaluation, aligning with the monthly snapshot data.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  },
+  {
+    "stage": "model_design/metric",
+    "decision": "Primary metric: PR_AUC",
+    "why": "deterministic metric policy for objective + tier 'moderate'",
+    "source": "deterministic policy"
+  },
+  {
+    "stage": "model_design/hpo",
+    "decision": "Using research HPO ranges for ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter optimization is crucial for maximizing model performance. The provided spaces cover key parameters for LightGBM, XGBoost, and HistGradientBoosting, focusing on learning rate, tree complexity, and regularization. Feature engineering should precede HPO, as stated in https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://antonsruberts.github.io/propensity-model', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://www.artefact.com/blog/scoring-customer-propensity-using-machine-learning-models-on-google-analytics-data']"
+  }
+]

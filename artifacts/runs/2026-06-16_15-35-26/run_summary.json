@@ -1,0 +1,26 @@
+{
+  "objective": "Build cc upselling propensity model",
+  "best_model": "GradientBoosting",
+  "algorithm_shortlist": [
+    "XGBoost",
+    "LightGBM",
+    "GradientBoosting"
+  ],
+  "primary_metric": "PR_AUC",
+  "primary_metric_value": 0.12050889359486242,
+  "optimal_threshold": 0.1062274204493241,
+  "imbalance_tier": "moderate",
+  "n_features": 36,
+  "rows_trained": 400000,
+  "rows_oot": 200000,
+  "training_snapshots": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04"
+  ],
+  "oot_snapshots": [
+    "2025-05",
+    "2025-06"
+  ]
+}

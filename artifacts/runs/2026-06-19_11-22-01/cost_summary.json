@@ -1,0 +1,15 @@
+{
+  "model": "gemini-2.5-flash-lite",
+  "pricing_per_1k_usd": {
+    "input": 0.0001,
+    "output": 0.0004
+  },
+  "calls": 0,
+  "api_calls": 0,
+  "cache_hits": 0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "total_tokens": 0,
+  "est_cost_usd": 0,
+  "note": "estimate only; $0 on free AI-Studio tier. Verify pricing table."
+}

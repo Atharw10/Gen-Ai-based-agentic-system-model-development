@@ -1,0 +1,33 @@
+{
+  "summary": "For building a credit card propensity model with a severe imbalance (5.03% positive rate) and 6 monthly snapshots, we recommend using Gradient Boosting Machines (GBMs) with appropriate handling of class imbalance. Given the data size and available snapshots, a focused observation window and a suitable performance window are crucial for robust model evaluation.",
+  "recommended_algorithms": [
+    "LightGBM with scale_pos_weight",
+    "XGBoost with scale_pos_weight"
+  ],
+  "algorithm_reasoning": "The positive rate of 0.0503 falls into the 'severe' imbalance tier. For this tier, Gradient Boosting Machines (GBMs) like LightGBM and XGBoost are highly effective. Crucially, these algorithms must be configured with `scale_pos_weight` to give appropriate weight to the minority class, preventing the model from simply predicting the majority class.",
+  "windows": {
+    "observation_window_months": 3,
+    "performance_window_months": 1,
+    "oot_months": 2
+  },
+  "window_reasoning": "With 6 monthly snapshots, we can construct feasible windows. An observation window of 3 months allows for capturing recent trends. A performance window of 1 month is suitable for evaluating model performance on recent data. This leaves 2 months for an Out-of-Time (OOT) validation set, which is a reasonable duration for a dataset of this size and frequency.",
+  "key_features": [
+    "customer_transaction_history",
+    "credit_utilization_ratio",
+    "demographic_information",
+    "past_credit_product_usage"
+  ],
+  "metrics": [
+    "Recall",
+    "PR-AUC"
+  ],
+  "metric_reasoning": "Given the 'severe' imbalance tier (positive rate of 0.0503), standard accuracy is misleading. Recall is essential to measure the model's ability to identify actual positive cases (customers likely to apply for a credit card). Precision-Recall Area Under the Curve (PR-AUC) is also critical as it provides a more informative measure of performance than ROC-AUC in highly imbalanced datasets, focusing on the trade-off between precision and recall for the positive class.",
+  "rationale": "The core challenge in this credit card propensity modeling task is the severe class imbalance. Therefore, the strategy prioritizes algorithms and metrics that are robust to this imbalance. GBMs with `scale_pos_weight` are chosen for their predictive power and ability to handle imbalanced data. The windowing strategy is designed to leverage the available monthly snapshots effectively for both training and out-of-time validation. The selected metrics, Recall and PR-AUC, directly address the business need of identifying potential credit card applicants while acknowledging the rarity of such events in the dataset.",
+  "mode": "gemini",
+  "query": "banking ML best practices for: Build CC propensity model",
+  "detected_pos_ratio": 0.0503,
+  "detected_tier": "severe",
+  "sources": [
+    "Gemini Flash Lite - data-aware recommendation"
+  ]
+}

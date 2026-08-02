@@ -1,0 +1,109 @@
+{
+  "eda_sample_rows": 400000,
+  "training_snapshots_used": [
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04"
+  ],
+  "target_rate_by_snapshot": [
+    {
+      "snapshot_month": "2025-01",
+      "n_customers": 100000,
+      "n_positive": 5082,
+      "target_rate": 0.05082
+    },
+    {
+      "snapshot_month": "2025-02",
+      "n_customers": 100000,
+      "n_positive": 4964,
+      "target_rate": 0.04964
+    },
+    {
+      "snapshot_month": "2025-03",
+      "n_customers": 100000,
+      "n_positive": 5074,
+      "target_rate": 0.05074
+    },
+    {
+      "snapshot_month": "2025-04",
+      "n_customers": 100000,
+      "n_positive": 5000,
+      "target_rate": 0.05
+    }
+  ],
+  "top_correlations": [
+    {
+      "feature": "total_credit_amt_1m",
+      "abs_correlation": 0.16506899265253028
+    },
+    {
+      "feature": "salary_credit_amt_1m",
+      "abs_correlation": 0.16326435008212228
+    },
+    {
+      "feature": "net_flow_1m",
+      "abs_correlation": 0.14286393963515429
+    },
+    {
+      "feature": "mcc_travel_amt_1m",
+      "abs_correlation": 0.14167675748312628
+    },
+    {
+      "feature": "total_credit_amt_3m",
+      "abs_correlation": 0.13901537412701467
+    },
+    {
+      "feature": "avg_txn_size_1m",
+      "abs_correlation": 0.13877129968535745
+    },
+    {
+      "feature": "total_credit_amt_6m",
+      "abs_correlation": 0.1313409278579789
+    },
+    {
+      "feature": "total_debit_amt_1m",
+      "abs_correlation": 0.12306645615211398
+    },
+    {
+      "feature": "mandate_amt_1m",
+      "abs_correlation": 0.11971262577055902
+    },
+    {
+      "feature": "pos_debit_amt_1m",
+      "abs_correlation": 0.11267374168205838
+    },
+    {
+      "feature": "mcc_entertainment_amt_1m",
+      "abs_correlation": 0.11116584407550616
+    },
+    {
+      "feature": "txn_count_1m",
+      "abs_correlation": 0.10977507513030987
+    },
+    {
+      "feature": "neft_rtgs_credit_amt_1m",
+      "abs_correlation": 0.10962318165422655
+    },
+    {
+      "feature": "other_credit_amt_1m",
+      "abs_correlation": 0.10583163275266112
+    },
+    {
+      "feature": "neft_rtgs_debit_amt_1m",
+      "abs_correlation": 0.1033295493151224
+    }
+  ],
+  "top_missing": {
+    "customer_id": 0.0,
+    "mcc_utilities_amt_1m": 0.0,
+    "adhoc_debit_count_1m": 0.0,
+    "adhoc_debit_amt_1m": 0.0,
+    "mandate_to_total_debit_ratio": 0.0,
+    "bounce_count_1m": 0.0,
+    "bounce_count_3m": 0.0,
+    "bounce_amt_1m": 0.0,
+    "bounce_flag_3m": 0.0,
+    "mcc_retail_amt_1m": 0.0
+  }
+}

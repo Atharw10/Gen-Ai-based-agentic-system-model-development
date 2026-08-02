@@ -1,0 +1,34 @@
+{
+  "summary": "For building a credit card upselling propensity model with 600,000 rows and a severe imbalance (5.03% positive rate), we recommend using Gradient Boosting Machines (GBMs) with appropriate handling for class imbalance. Given the limited monthly snapshots, a careful selection of observation and out-of-time (OOT) windows is crucial for robust model evaluation.",
+  "recommended_algorithms": [
+    "LightGBM with scale_pos_weight",
+    "XGBoost with scale_pos_weight"
+  ],
+  "algorithm_reasoning": "The positive rate of 5.03% falls into the 'severe' imbalance tier. For this tier, Gradient Boosting Machines (GBMs) like LightGBM and XGBoost are highly recommended. Crucially, these algorithms must be configured with the `scale_pos_weight` parameter to appropriately weight the minority class during training, preventing the model from being biased towards the majority class. The dataset size of 600,000 rows is substantial enough to benefit from the power of GBMs.",
+  "windows": {
+    "observation_window_months": 3,
+    "performance_window_months": 1,
+    "oot_months": 2
+  },
+  "window_reasoning": "With 6 monthly snapshots available, we need to ensure the observation and OOT windows do not exceed this total. A 3-month observation window is typical and feasible here. To align with the data size and the need for a reasonably sized OOT period for performance evaluation, a 2-month OOT window is recommended. This leaves 1 month for performance evaluation, which is a common practice for credit card models, especially when dealing with monthly snapshots.",
+  "key_features": [
+    "Customer transaction history (frequency, recency, monetary value)",
+    "Existing credit card product holdings and usage",
+    "Demographic information (age, income bracket, location)",
+    "Credit bureau scores and history",
+    "Customer engagement with marketing campaigns"
+  ],
+  "metrics": [
+    "Recall",
+    "PR-AUC"
+  ],
+  "metric_reasoning": "The positive rate of 5.03% classifies this as a 'severe' imbalance tier. For such scenarios, standard accuracy is misleading. Recall is essential to measure the model's ability to identify a high proportion of the actual positive cases (customers likely to upsell). Precision-Recall AUC (PR-AUC) is also a critical metric as it provides a better understanding of the trade-off between precision and recall, especially when the positive class is rare.",
+  "rationale": "This approach prioritizes robust modeling for a severely imbalanced dataset within the constraints of the provided monthly snapshots. By using GBMs with `scale_pos_weight`, we address the imbalance directly. The chosen windows ensure a practical and evaluable training and testing setup. The recommended metrics are specifically designed to assess performance on rare events, which is paramount for an upselling propensity model.",
+  "mode": "gemini",
+  "query": "banking ML best practices for: Build cc upselling propensity model",
+  "detected_pos_ratio": 0.0503,
+  "detected_tier": "severe",
+  "sources": [
+    "Gemini Flash Lite - data-aware recommendation"
+  ]
+}

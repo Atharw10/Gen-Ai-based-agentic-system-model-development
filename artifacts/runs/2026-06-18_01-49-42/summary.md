@@ -1,0 +1,1 @@
+Best model **XGBoost** (trial 11) selected by OOT PR_AUC across 20 trials. OOT metrics: precision=0.9070, recall=0.7222, f1=0.8041, roc_auc=0.9867, pr_auc=0.9173, ks=0.9226, gini=0.9733. F1-optimal threshold 0.086.

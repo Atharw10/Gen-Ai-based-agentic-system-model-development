@@ -1,0 +1,261 @@
+{
+  "n_in": 41,
+  "n_after_hygiene": 39,
+  "n_after_univariate": 24,
+  "n_after_redundancy": 24,
+  "n_selected": 24,
+  "selected_features": [
+    "feat_inf_0",
+    "feat_inf_1",
+    "feat_inf_2",
+    "feat_inf_3",
+    "feat_inf_4",
+    "feat_inf_5",
+    "feat_inf_6",
+    "feat_inf_7",
+    "feat_noise_0",
+    "feat_noise_1",
+    "feat_noise_3",
+    "feat_noise_6",
+    "feat_noise_11",
+    "feat_noise_14",
+    "feat_noise_15",
+    "feat_noise_16",
+    "feat_noise_18",
+    "feat_noise_20",
+    "feat_noise_21",
+    "feat_noise_24",
+    "feat_noise_26",
+    "feat_noise_27",
+    "feat_noise_29",
+    "leak_target_peek"
+  ],
+  "dropped_constant": [
+    "const_col"
+  ],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [
+    "txn_ref"
+  ],
+  "dropped_low_iv": [
+    "feat_noise_13",
+    "feat_noise_4",
+    "feat_noise_23",
+    "feat_noise_22",
+    "feat_noise_10",
+    "feat_noise_8",
+    "feat_noise_25",
+    "feat_noise_7",
+    "feat_noise_9",
+    "feat_noise_5",
+    "feat_noise_19",
+    "feat_noise_12",
+    "feat_noise_17",
+    "feat_noise_28",
+    "feat_noise_2"
+  ],
+  "dropped_redundant": [],
+  "suspicious_high_iv": [
+    "leak_target_peek",
+    "feat_inf_1",
+    "feat_inf_3",
+    "feat_inf_0"
+  ],
+  "iv_table": [
+    {
+      "feature": "leak_target_peek",
+      "IV": 5.659022815150189,
+      "strength": "suspicious"
+    },
+    {
+      "feature": "feat_inf_1",
+      "IV": 0.7430264382063921,
+      "strength": "suspicious"
+    },
+    {
+      "feature": "feat_inf_3",
+      "IV": 0.7100640901826606,
+      "strength": "suspicious"
+    },
+    {
+      "feature": "feat_inf_0",
+      "IV": 0.5224139699431717,
+      "strength": "suspicious"
+    },
+    {
+      "feature": "feat_inf_6",
+      "IV": 0.3626029399301792,
+      "strength": "strong"
+    },
+    {
+      "feature": "feat_inf_7",
+      "IV": 0.28356382802376373,
+      "strength": "medium"
+    },
+    {
+      "feature": "feat_inf_4",
+      "IV": 0.28193816331342764,
+      "strength": "medium"
+    },
+    {
+      "feature": "feat_inf_5",
+      "IV": 0.26423492382167435,
+      "strength": "medium"
+    },
+    {
+      "feature": "feat_inf_2",
+      "IV": 0.22158976861008367,
+      "strength": "medium"
+    },
+    {
+      "feature": "feat_noise_11",
+      "IV": 0.07660721590861436,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_6",
+      "IV": 0.05593749623765961,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_3",
+      "IV": 0.039799889301762745,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_27",
+      "IV": 0.03961920868991637,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_20",
+      "IV": 0.036624047633688456,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_26",
+      "IV": 0.036148506985429166,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_29",
+      "IV": 0.03521856979701318,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_24",
+      "IV": 0.03447884843414379,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_15",
+      "IV": 0.030410322620959475,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_1",
+      "IV": 0.02963340069001004,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_0",
+      "IV": 0.02598774784417433,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_16",
+      "IV": 0.02347149045677557,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_21",
+      "IV": 0.023081617240575475,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_18",
+      "IV": 0.022774239385722338,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_14",
+      "IV": 0.021915991931897496,
+      "strength": "weak"
+    },
+    {
+      "feature": "feat_noise_13",
+      "IV": 0.01994126927722262,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_4",
+      "IV": 0.01941726229513578,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_23",
+      "IV": 0.018666043486485873,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_22",
+      "IV": 0.018337120032506378,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_10",
+      "IV": 0.017387987464373554,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_8",
+      "IV": 0.01674537439833354,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_25",
+      "IV": 0.015667120525441322,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_7",
+      "IV": 0.015246318037180455,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_9",
+      "IV": 0.015242635118802975,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_5",
+      "IV": 0.014582176320433737,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_19",
+      "IV": 0.014240915511228263,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_12",
+      "IV": 0.010501796941627738,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_17",
+      "IV": 0.009781346110251155,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_28",
+      "IV": 0.009242796313417838,
+      "strength": "useless"
+    },
+    {
+      "feature": "feat_noise_2",
+      "IV": 0.009150253539543565,
+      "strength": "useless"
+    }
+  ]
+}

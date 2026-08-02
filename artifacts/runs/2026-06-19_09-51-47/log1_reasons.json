@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "research/models",
+    "decision": "Recommended models: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "LightGBM and XGBoost are highly effective for tabular data and handle imbalanced datasets well. HistGradientBoosting is a strong contender for its efficiency and performance. These algorithms are well-suited for propensity modeling and have demonstrated success in similar banking applications (as suggested by general ML best practices and the nature of the problem).",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "research/windows",
+    "decision": "observation=3m, OOT=1 snapshot(s)",
+    "why": "A 3-month observation window allows for capturing recent customer behavior without being overly diluted by older data. A 1-month out-of-time (OOT) window provides a frequent and relevant validation of model performance against the most current data, crucial for a dynamic product like credit cards. This aligns with common practices for time-series based propensity modeling.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "research/hpo",
+    "decision": "HPO ranges proposed for: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter optimization is critical for maximizing model performance. The specified ranges for LightGBM, XGBoost, and HistGradientBoosting cover common effective values and are informed by general best practices for these algorithms in classification tasks. Tuning these parameters will help the models generalize better and capture the nuances of the propensity data.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "feature_engineering/families",
+    "decision": "Suggested families: ['Demographics', 'Account Activity', 'Credit Behavior', 'Product Holdings', 'Marketing Interactions', 'Time-Based Features']",
+    "why": "A comprehensive set of feature families is essential for building an accurate propensity model. These families cover customer characteristics, financial behavior, and interactions, providing a holistic view. The inclusion of time-based features is particularly important given the monthly snapshot data and the dynamic nature of propensity.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/algorithms",
+    "decision": "Shortlist applied: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "LightGBM and XGBoost are highly effective for tabular data and handle imbalanced datasets well. HistGradientBoosting is a strong contender for its efficiency and performance. These algorithms are well-suited for propensity modeling and have demonstrated success in similar banking applications (as suggested by general ML best practices and the nature of the problem).",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/windows",
+    "decision": "train=['2025-01', '2025-02', '2025-03', '2025-04', '2025-05'], OOT=['2025-06']",
+    "why": "A 3-month observation window allows for capturing recent customer behavior without being overly diluted by older data. A 1-month out-of-time (OOT) window provides a frequent and relevant validation of model performance against the most current data, crucial for a dynamic product like credit cards. This aligns with common practices for time-series based propensity modeling.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/metric",
+    "decision": "Primary metric: PR_AUC",
+    "why": "deterministic metric policy for objective + tier 'moderate'",
+    "source": "deterministic policy"
+  },
+  {
+    "stage": "model_design/hpo",
+    "decision": "Using research HPO ranges for ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter optimization is critical for maximizing model performance. The specified ranges for LightGBM, XGBoost, and HistGradientBoosting cover common effective values and are informed by general best practices for these algorithms in classification tasks. Tuning these parameters will help the models generalize better and capture the nuances of the propensity data.",
+    "source": "Gemini + web: ['https://www.altexsoft.com/blog/propensity-model', 'https://datascience.stackexchange.com/questions/111235/feature-creation-ideas-for-propensity-models', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  }
+]

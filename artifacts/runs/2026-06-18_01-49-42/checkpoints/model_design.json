@@ -1,0 +1,17 @@
+{
+  "stage": "model_design",
+  "summary": "Deterministic design for tier 'moderate'.",
+  "decisions": {
+    "primary_metric": "PR_AUC",
+    "algorithms": [
+      "LightGBM",
+      "XGBoost"
+    ],
+    "imbalance_tier": "moderate",
+    "oot_snapshots": [
+      "2025-05",
+      "2025-06"
+    ],
+    "correlation_threshold": 0.85
+  }
+}

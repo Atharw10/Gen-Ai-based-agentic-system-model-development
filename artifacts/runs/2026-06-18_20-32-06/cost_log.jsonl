@@ -1,0 +1,4 @@
+{"label": "research", "model": "gemini-2.5-flash-lite", "input_tokens": 403, "output_tokens": 1234, "total_tokens": 1637, "cached": false, "tokens_estimated": false, "est_cost_usd": 0.000534}
+{"label": "stop_decision", "model": "gemini-2.5-flash-lite", "input_tokens": 102, "output_tokens": 69, "total_tokens": 171, "cached": false, "tokens_estimated": false, "est_cost_usd": 3.8e-05}
+{"label": "strategist", "model": "gemini-2.5-flash-lite", "input_tokens": 92, "output_tokens": 93, "total_tokens": 185, "cached": false, "tokens_estimated": false, "est_cost_usd": 4.6e-05}
+{"label": "narrative", "model": "gemini-2.5-flash-lite", "input_tokens": 144, "output_tokens": 138, "total_tokens": 282, "cached": false, "tokens_estimated": false, "est_cost_usd": 7e-05}

@@ -1,0 +1,16 @@
+[
+  {
+    "round": 1,
+    "best_oot": 0.12061,
+    "improvement": null,
+    "continue": true,
+    "note": "llm: continue \u2014 The models are still showing improvement in the first round of iteration. While the gains are marginal, there's potential for further optimization. Continuing f"
+  },
+  {
+    "round": 2,
+    "best_oot": 0.12061,
+    "improvement": 0.0,
+    "continue": false,
+    "note": "stop: hard cap reached (2/2 rounds)"
+  }
+]

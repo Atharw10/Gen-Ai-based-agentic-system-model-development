@@ -1,0 +1,331 @@
+{
+  "n_in": 52,
+  "n_after_hygiene": 52,
+  "n_after_univariate": 47,
+  "n_after_redundancy": 40,
+  "n_selected": 40,
+  "selected_features": [
+    "col_0002",
+    "col_0003",
+    "col_0004",
+    "col_0006",
+    "col_0007",
+    "col_0008",
+    "col_0009",
+    "col_0010",
+    "col_0013",
+    "col_0014",
+    "col_0015",
+    "col_0016",
+    "col_0017",
+    "col_0018",
+    "col_0020",
+    "col_0021",
+    "col_0022",
+    "col_0023",
+    "col_0024",
+    "col_0025",
+    "col_0026",
+    "col_0027",
+    "col_0028",
+    "col_0029",
+    "col_0030",
+    "col_0031",
+    "col_0032",
+    "col_0034",
+    "col_0035",
+    "col_0036",
+    "col_0037",
+    "col_0038",
+    "col_0039",
+    "col_0040",
+    "col_0041",
+    "col_0042",
+    "col_0043",
+    "col_0044",
+    "col_0045",
+    "col_0046"
+  ],
+  "dropped_constant": [],
+  "dropped_high_missing": [],
+  "dropped_high_cardinality": [],
+  "dropped_low_iv": [
+    "col_0048",
+    "col_0047",
+    "credit_velocity_3m_6m",
+    "col_0001",
+    "debit_velocity_3m_6m"
+  ],
+  "dropped_redundant": [
+    "col_0005",
+    "col_0011",
+    "col_0012",
+    "col_0019",
+    "col_0033",
+    "credit_debit_ratio_3m",
+    "bounce_rate_3m"
+  ],
+  "suspicious_high_iv": [],
+  "iv_table": [
+    {
+      "feature": "col_0002",
+      "IV": 0.48906322504878597,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0009",
+      "IV": 0.45859773677194837,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0012",
+      "IV": 0.45858056807018016,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0042",
+      "IV": 0.37566705166323555,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0044",
+      "IV": 0.3500598085248761,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0036",
+      "IV": 0.3459752353089057,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0010",
+      "IV": 0.34116715078189735,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0003",
+      "IV": 0.31434013954849793,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0017",
+      "IV": 0.3051458797265648,
+      "strength": "strong"
+    },
+    {
+      "feature": "col_0030",
+      "IV": 0.29161897580697743,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0011",
+      "IV": 0.2910227345294049,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0033",
+      "IV": 0.2900652321672168,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0032",
+      "IV": 0.27687523519477353,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0031",
+      "IV": 0.2621967281876902,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0046",
+      "IV": 0.2546624679836311,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0040",
+      "IV": 0.25196964027183777,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0026",
+      "IV": 0.25021078212370024,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0023",
+      "IV": 0.24494249372011806,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0015",
+      "IV": 0.23691623610782,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0027",
+      "IV": 0.23212968553462066,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0021",
+      "IV": 0.22445660455688665,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0041",
+      "IV": 0.2075994854419354,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0034",
+      "IV": 0.20445323344757932,
+      "strength": "medium"
+    },
+    {
+      "feature": "bounce_rate_3m",
+      "IV": 0.20190205730528094,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0043",
+      "IV": 0.20116406224612793,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0016",
+      "IV": 0.19987862924601596,
+      "strength": "medium"
+    },
+    {
+      "feature": "credit_debit_ratio_3m",
+      "IV": 0.1970156287237947,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0020",
+      "IV": 0.18516557904301417,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0035",
+      "IV": 0.17689540920484736,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0018",
+      "IV": 0.17267088718776807,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0025",
+      "IV": 0.1670525819837672,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0024",
+      "IV": 0.15500731235296122,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0037",
+      "IV": 0.14604035663582335,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0038",
+      "IV": 0.14463720012966413,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0039",
+      "IV": 0.13919295726644632,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0004",
+      "IV": 0.12754206587863226,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0019",
+      "IV": 0.12555302454713896,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0028",
+      "IV": 0.12330118057777192,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0006",
+      "IV": 0.11422659375077147,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0014",
+      "IV": 0.1108059270355389,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0022",
+      "IV": 0.10177207539132144,
+      "strength": "medium"
+    },
+    {
+      "feature": "col_0008",
+      "IV": 0.07434281666984284,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0029",
+      "IV": 0.06673161449473983,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0013",
+      "IV": 0.061095833007815736,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0005",
+      "IV": 0.059896292629665226,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0007",
+      "IV": 0.05728499725872724,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0045",
+      "IV": 0.05315178682454007,
+      "strength": "weak"
+    },
+    {
+      "feature": "col_0048",
+      "IV": 0.010887600492396454,
+      "strength": "useless"
+    },
+    {
+      "feature": "col_0047",
+      "IV": 0.005766817638891911,
+      "strength": "useless"
+    },
+    {
+      "feature": "credit_velocity_3m_6m",
+      "IV": 0.0005269827567027024,
+      "strength": "useless"
+    },
+    {
+      "feature": "col_0001",
+      "IV": 0.00021385783556110964,
+      "strength": "useless"
+    },
+    {
+      "feature": "debit_velocity_3m_6m",
+      "IV": 0.00018019328953978374,
+      "strength": "useless"
+    }
+  ]
+}

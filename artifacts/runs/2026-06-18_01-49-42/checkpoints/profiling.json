@@ -1,0 +1,9 @@
+{
+  "stage": "profiling",
+  "summary": "Data profiled.",
+  "decisions": {
+    "n_rows": 7200,
+    "pos_ratio": 0.0838,
+    "n_snapshots": 6
+  }
+}

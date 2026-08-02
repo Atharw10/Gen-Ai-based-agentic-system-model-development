@@ -1,0 +1,50 @@
+[
+  {
+    "stage": "research/models",
+    "decision": "Recommended models: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "LightGBM and XGBoost are highly effective for tabular data and handle large datasets efficiently, often outperforming traditional methods. HistGradientBoosting is a strong contender for its speed and performance, especially with large datasets. These algorithms are well-suited for classification tasks with moderate imbalance and can capture complex non-linear relationships. LogisticRegression is a good baseline but may struggle with the complexity of the data. RandomForest and GradientBoosting are also viable but LightGBM and XGBoost generally offer better performance and scalability.",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "research/windows",
+    "decision": "observation=6m, OOT=1 snapshot(s)",
+    "why": "Using 6 months of historical data for observation provides a sufficiently rich dataset to capture recent customer behavior and trends. A 1-month out-of-time (OOT) window is standard for evaluating model performance on the most recent, unseen data, ensuring the model's ability to generalize to current conditions. This aligns with the monthly snapshot approach.",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "research/hpo",
+    "decision": "HPO ranges proposed for: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter tuning is crucial for optimizing model performance, especially with imbalanced datasets. The proposed search spaces for LightGBM, XGBoost, and HistGradientBoosting cover key parameters that significantly influence model accuracy and generalization. Prioritizing feature engineering before HPO, as suggested by [https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c], ensures that the tuning process operates on a more informative feature set, leading to better results. This approach is also supported by general ML best practices [https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml].",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "feature_engineering/families",
+    "decision": "Suggested families: ['Demographics', 'Transaction History', 'Existing Products', 'Credit Bureau Data', 'Marketing Interactions', 'Behavioral Features']",
+    "why": "A comprehensive set of feature families is essential for building a robust CC propensity model. By considering demographics, transaction history, existing products, credit bureau data, marketing interactions, and derived behavioral features, we can capture a wide range of customer attributes and behaviors that influence their likelihood of applying for a credit card. This multi-faceted approach to feature engineering is critical for addressing the moderate imbalance and achieving high predictive accuracy.",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/algorithms",
+    "decision": "Shortlist applied: ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "LightGBM and XGBoost are highly effective for tabular data and handle large datasets efficiently, often outperforming traditional methods. HistGradientBoosting is a strong contender for its speed and performance, especially with large datasets. These algorithms are well-suited for classification tasks with moderate imbalance and can capture complex non-linear relationships. LogisticRegression is a good baseline but may struggle with the complexity of the data. RandomForest and GradientBoosting are also viable but LightGBM and XGBoost generally offer better performance and scalability.",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/windows",
+    "decision": "train=['2025-01', '2025-02', '2025-03', '2025-04', '2025-05'], OOT=['2025-06']",
+    "why": "Using 6 months of historical data for observation provides a sufficiently rich dataset to capture recent customer behavior and trends. A 1-month out-of-time (OOT) window is standard for evaluating model performance on the most recent, unseen data, ensuring the model's ability to generalize to current conditions. This aligns with the monthly snapshot approach.",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  },
+  {
+    "stage": "model_design/metric",
+    "decision": "Primary metric: PR_AUC",
+    "why": "deterministic metric policy for objective + tier 'moderate'",
+    "source": "deterministic policy"
+  },
+  {
+    "stage": "model_design/hpo",
+    "decision": "Using research HPO ranges for ['LightGBM', 'XGBoost', 'HistGradientBoosting']",
+    "why": "Hyperparameter tuning is crucial for optimizing model performance, especially with imbalanced datasets. The proposed search spaces for LightGBM, XGBoost, and HistGradientBoosting cover key parameters that significantly influence model accuracy and generalization. Prioritizing feature engineering before HPO, as suggested by [https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c], ensures that the tuning process operates on a more informative feature set, leading to better results. This approach is also supported by general ML best practices [https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml].",
+    "source": "Gemini + web: ['https://dzone.com/articles/hyperparameter-tuning-feature-engineering-ml', 'https://www.oajaiml.com/uploads/archivepdf/237151184.pdf', 'https://medium.com/data-science/why-you-should-do-feature-engineering-first-hyperparameter-tuning-second-as-a-data-scientist-334be5eb276c', 'https://datatonic.com/insights/propensity-modelling-tensorflow-cloud-ai', 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11389638']"
+  }
+]
